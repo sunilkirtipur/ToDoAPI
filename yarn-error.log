@@ -1,0 +1,53 @@
+Arguments: 
+  /usr/bin/nodejs /usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  6.11.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "circleapi",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+      "watch": "babel -w src/ -d dist/",
+      "build": "babel src/ -d dist/",
+      "serve": "babel -w src/ -d dist/ | nodemon --watch dist",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.16.2",
+    },
+    "devDependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-preset-es2015": "^6.24.1",
+      "nodemon": "^1.14.11",
+      "rimraf": "^2.6.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /home/janak/tutorials/ticket/ticketapi/package.json: Unexpected token } in JSON at position 394
+      at Object.parse (native)
+      at /usr/share/yarn/lib/cli.js:770:59
+      at next (native)
+      at step (/usr/share/yarn/lib/cli.js:92:30)
+      at /usr/share/yarn/lib/cli.js:103:13
